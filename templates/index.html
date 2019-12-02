@@ -1,111 +1,20 @@
-{% extends "bootstrap/base.html" %}
-{% block title %} Steering behaviour {% endblock title %}
-
-{% block head %}
-{{ super() }}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
-<script src={{ url_for('send_static', path='math.js') }}></script>
-<script src={{ url_for('send_static', path='node.js') }}></script>
-<script src={{ url_for('send_static', path='link.js') }}></script>
-<script src={{ url_for('send_static', path='node_manager.js') }}></script>
-<script src={{ url_for('send_static', path='animator.js') }}></script>
-<script src={{ url_for('send_static', path='sketch.js') }}></script>
-{% endblock head %}
-
-{% block content %}
-<div class="container">
-  <h1 class="text-center"> Steering behaviour </h1>
-  <p class="text-justify">
-    <small>
-      Steering behaviours is a beautiful class of techniques to computationally reproduce natural
-      bahaviours.
-      Each particle here is independent, and influenced only by its immediate surrounding,
-      fleeing the mouse and trying to get back home to the text. See
-      <a href="https://www.red3d.com/cwr/papers/1999/gdc99steer.pdf">this</a>
-      1999 paper by Craig Reynolds which introduced these techniques.
-    </small>
-  </p>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-6 small">
-        <table class="table table-striped">
-          <tr>
-
-          </tr>
-          <tr>
-            <td>
-              Message
-            </td>
-            <td>
-              <div id='messageBox'>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Text Size
-            </td>
-            <td>
-              <div id='textSize'>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Number of particles
-            </td>
-            <td>
-              <div id='nParticles'>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Desire
-            </td>
-            <td>
-              <div id='maxSeekVel'>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Fear
-            </td>
-            <td>
-              <div id='maxFleeVel'>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Sight
-            </td>
-            <td>
-              <div id='sight'>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div id='redrawButton'>
-              </div>
-            </td>
-          </tr>
-        </table>
-      </div>
-      <div class="
-        col-xs-6">
-        <div id="canvasHolder" align="center">
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-</div>
-
-{% endblock content %}
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5.js example</title>
+    <style> body {padding: 0; margin: 0;} </style>
+    <script src="../static/libraries/p5.js"></script>
+    <script src="../static/libraries/p5.sound.js"></script>
+    <script src="../static/libraries/easing.js"></script>
+    <script src="../static/math.js"></script>
+    <script src="../static/node.js"></script>
+    <script src="../static/link.js"></script>
+    <script src="../static/node_manager.js"></script>
+    <script src="../static/animator.js"></script>
+    <script src="../static/sketch.js"></script>
+  </head>
+  <body>
+  </body>
+</html>
