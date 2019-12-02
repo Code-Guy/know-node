@@ -5,7 +5,7 @@ let delate_time = 1 / fps;
 
 function preload()
 {
-  msyhFont = loadFont('fonts/msyh.otf');
+  msyhFont = loadFont('../fonts/msyh.otf');
 }
 
 function setup()
