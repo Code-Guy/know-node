@@ -7,8 +7,13 @@ bootstrap = Bootstrap(app)
 
 
 @app.route('/')
-def index():
-    return render_template('index.html')
+def home():
+    return render_template('home.html')
+
+
+@app.route('/static/<path:path>')
+def send_static(path):
+    return send_from_directory('static', path)
 
 
 if __name__ == '__main__':
